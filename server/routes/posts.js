@@ -17,6 +17,7 @@ router.get('/', (req, res)=>{
 //    console.log(posts.data);
 
 // });
+//for checking only
 axios.get(postAPI+'posts')
   .then(function (posts) {
     console.log(posts.data);
