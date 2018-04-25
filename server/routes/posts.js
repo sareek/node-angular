@@ -20,9 +20,15 @@ router.get('/', (req, res)=>{
 //for checking only
 axios.get(postAPI+'posts')
   .then(function (posts) {
-    console.log(posts.data);
-  });
+   // console.log(posts.data);
+     res.status(200).json(posts.data);  
+
+})
+   .catch(error=>{
+       res.status(500).send(error);
+   })
 
 });
+
 
 module.exports =router;
